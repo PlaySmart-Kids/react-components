@@ -1,0 +1,10 @@
+@use "sass:math";
+@use "sass:meta";
+
+@function rem($pixel, $baseFontSize:16) {
+  @if (not meta.type-of($pixel) == "number" or not meta.type-of($baseFontSize) == "number") {
+    @error "Both $pixel and $baseFontSize must be of type number with a unit.";
+  }
+  $cal: calc($pixel / $baseFontSize);
+  @return #{$cal}rem;
+}

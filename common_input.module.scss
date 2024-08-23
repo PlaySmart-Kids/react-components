@@ -1,0 +1,300 @@
+@import "./mixins";
+
+.InputRoot {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+}
+
+.Section {
+  display: flex;
+  position: relative;
+  width: 100%;
+  //background: var(--common-white); // hint section using this style and it can't have any background
+
+  color: var(--text-secondary);
+
+  &:focus-within {
+    color: var(--text-primary);
+  }
+}
+
+
+.HintSection {
+  display: flex;
+  width: 100%;
+  padding-inline: rem(8);
+  font-size: var(--input-hint-font-size);
+}
+
+.HintSectionCompact {
+  padding-inline: rem(6);
+  font-size: var(--input-hint-compact-font-size);
+
+}
+
+.NormalBorder {
+  border-radius: var(--input-border-radius);
+  border: rem(1) solid var(--gray-400);
+  outline: transparent solid rem(1);
+}
+
+.HoverBorder {
+  border-radius: var(--input-border-radius);
+  border: rem(1) solid var(--text-primary);
+  outline: transparent solid rem(1);
+}
+
+.DisableBorder {
+  border-radius: var(--input-border-radius);
+  border: rem(1) solid var(--gray-200);
+}
+
+.DisableOutline {
+  border-radius: var(--input-border-radius);
+  outline-color: rem(1) solid var(--gray-200);
+}
+
+.FocusBorder {
+  border-radius: var(--input-border-radius);
+  border-width: rem(1);
+  border-style: solid;
+  outline-width: rem(1);
+  outline-style: solid;
+}
+
+.StartAdornmentContainer {
+  display: inline-flex;
+  position: relative;
+  margin-block-start: rem(11);
+  margin-inside: auto;
+  padding-inline-start: rem(12);
+  padding-inline-end: rem(6);
+  height: rem(24);
+}
+
+.StartAdornmentContainerCompact {
+  margin-block-start: rem(9);
+  padding-inline-start: rem(8);
+  padding-inline-end: rem(2);
+}
+
+.NormalSpacing {
+  width: rem(16);
+  min-width: rem(16);
+  max-width: rem(16);
+}
+
+.CompactSpacing {
+  width: rem(8);
+  min-width: rem(8);
+  max-width: rem(8);
+}
+
+.EndAdornmentContainer {
+  display: inline-block;
+  position: relative;
+  margin-block-start: rem(11);
+  margin-inside: auto;
+  padding-inline-end: rem(8);
+  padding-inline-start: rem(2);
+  height: rem(24);
+}
+
+.EndAdornmentContainerCompact {
+  margin-block-start: rem(9);
+  padding-inline-end: rem(8);
+  padding-inline-start: rem(4);
+}
+
+.LargePadding {
+  padding-block: rem(14);
+}
+
+.RegularPadding {
+  padding-block: rem(10);
+}
+
+.SmallPadding {
+  padding-block: rem(8);
+}
+
+.ExtraSmallPadding {
+  padding-block: rem(4);
+}
+
+
+.WrapPadding {
+
+  padding-block: 0;
+  padding-inline-end: rem(10);
+  min-width: rem(50);
+  width: fit-content;
+  .DefaultListItemRenderOnInput {
+    width: fit-content;
+    min-width: unset;
+    text-align: right;
+  }
+}
+
+.Label {
+  pointer-events: none;
+  position: absolute;
+  font-size: var(--input-label-font-size);
+  top: min(50% - 0.75rem, 1.125rem);
+  left: rem(0);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  clip: auto;
+  overflow: hidden;
+  width: 100%;
+  max-width: 80%;
+  transition: top 0.2s,font-size 0.2s,margin-inline-start 0.2s;
+}
+
+$temp12: rem(12);
+$temp18: rem(18);
+
+.LabelForComboBox {
+  pointer-events: none;
+  position: absolute;
+  font-size: var(--input-label-font-size);
+  top: min(calc(50% - #{$temp12}),#{$temp18});
+  left: rem(16);
+  transition: top 0.2s,font-size 0.2s,margin-inline-start 0.2s;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  clip: auto;
+  overflow: hidden;
+  width: 100%;
+  max-width: 80%;
+}
+
+
+.LabelNormalColor {
+  color: var(--text-secondary);
+}
+
+
+.LabelActiveColor {
+  color: var(--text-primary);
+}
+
+.LabelSmaller {
+  font-size: rem(12);
+}
+
+.LabelMoveUp {
+  position: absolute;
+  top: rem(-12);
+  left: rem(-5);
+  background-color: white;
+  font-size: var(--input-label-font-size);
+  padding-inline: rem(3);
+  width: fit-content;
+}
+
+.LabelMoveUpForComboBox {
+  position: absolute;
+  top: rem(-12);
+  left: rem(12);
+  background-color: white;
+  font-size: var(--input-label-font-size);
+  padding-inline: rem(3);
+  width: fit-content;
+}
+
+
+@keyframes onAutoFillStart {
+}
+
+@keyframes onAutoFillCancel {
+}
+
+.InputContainer {
+  flex-grow: 1;
+  display: inline-block;
+  position: relative;
+
+  > input:-webkit-autofill {
+    animation-name: onAutoFillStart;
+  }
+}
+
+.Input {
+  outline: none;
+  border: 0;
+  background: #FFF;
+  color: var(--text-secondary);
+  font-family: var(--font-secondary) , sans-serif;
+  padding-inline: 0;
+  width: 100%;
+  font-size: var(--input-font-size);
+  font-weight: 400;
+
+  &:focus {
+    color: var(--text-primary);
+  }
+
+  &:disabled {
+    color: var(--text-disabled);
+  }
+}
+
+
+.PasswordInput {
+  letter-spacing: rem(3);
+}
+
+.CustomInput {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+.CustomTextArea {
+  position: absolute;
+  top: rem(9);
+  left: 0;
+  right: 0;
+  bottom: rem(9);
+  display: flex;
+  align-items: flex-start;
+  background: transparent;
+  overflow: hidden;
+}
+
+.LabelCompact {
+  left: rem(2);
+  font-size: var(--input-compact-label-font-size);
+}
+
+.InputCompact {
+  font-size: var(--input-compact-font-size);
+}
+
+
+.LabelMoveUpCompact {
+  top: rem(-12);
+  left: rem(5);
+}
+
+.HiddenInput {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+

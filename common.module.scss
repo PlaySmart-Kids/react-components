@@ -1,0 +1,457 @@
+@import "../css/mixins";
+
+.FullWidth {
+  width: 100%;
+}
+
+.FullHeight {
+  height: 100%;
+}
+
+.FitContentWidth {
+  width: fit-content;
+}
+
+.EnableEvent {
+  pointer-events: all;
+}
+
+.DisableEvent {
+  cursor: default;
+  pointer-events: none;
+}
+
+.Pointer {
+  cursor: pointer;
+}
+
+.InputWidth {
+  width: rem(250);
+}
+
+.DisableTextColor {
+  color: var(--text-disabled);
+}
+
+.TextPrimary {
+  color: var(--text-primary);
+}
+
+.TextSecondary {
+  color: var(--text-secondary);
+}
+
+.HiddenShadowWhenHover:hover {
+  box-shadow: none;
+}
+
+.test-2 {
+  color: red;
+}
+
+$types: 'primary','info','error','success','warning','secondary';
+$hues: 'main', 'light','lighter', 'lightest', 'white' , 'dark','darker', 'darkest', 'black';
+
+$grays: 100,200,300,400,500,600,700,800,900;
+
+$texts: 'text-primary','text-secondary','text-disabled','common-black','common-white','transparent';
+
+
+@each $hue in $hues {
+  @each $type in $types {
+    @if $hue == 'white'  {
+      .Color-#{$type}-#{$hue} {
+        color: var(--common-white);
+      }
+    } @else if $hue == 'black' {
+      .Color-#{$type}-#{$hue} {
+        color: var(--common-black);
+      }
+    } @else {
+      .Color-#{$type}-#{$hue} {
+        color: var(--#{$type}-#{$hue});
+      }
+    }
+  }
+}
+
+@each $gray in $grays {
+  .Color-gray-#{$gray} {
+    color: var(--gray-#{$gray});
+  }
+}
+
+@each $text in $texts {
+  .Color-#{$text} {
+    color: var(--#{$text});
+  }
+}
+
+@each $hue in $hues {
+  @each $type in $types {
+    @if $hue == 'white'  {
+      .Color-hover-#{$type}-#{$hue}:hover, .Color-hover-#{$type}-#{$hue}:focus {
+        color: var(--common-white);
+      }
+    } @else if $hue == 'black' {
+      .Color-hover-#{$type}-#{$hue}:hover, .Color-hover-#{$type}-#{$hue}:focus {
+        color: var(--common-black);
+      }
+    } @else {
+      .Color-hover-#{$type}-#{$hue}:hover, .Color-hover-#{$type}-#{$hue}:focus {
+        color: var(--#{$type}-#{$hue});
+      }
+    }
+  }
+}
+
+@each $gray in $grays {
+  .Color-hover-gray-#{$gray}:hover, .Color-hover-gray-#{$gray}:focus, {
+    color: var(--gray-#{$gray});
+  }
+}
+
+
+@each $hue in $hues {
+  @each $type in $types {
+    @if $hue == 'white'  {
+      .Background-#{$type}-#{$hue} {
+        background-color: var(--common-white);
+      }
+    } @else if $hue == 'black' {
+      .Background-#{$type}-#{$hue} {
+        background-color: var(--common-black);
+      }
+    } @else {
+      .Background-#{$type}-#{$hue} {
+        background-color: var(--#{$type}-#{$hue});
+      }
+    }
+  }
+}
+
+@each $text in $texts {
+  .Background-#{$text} {
+    background-color: var(--#{$text});
+  }
+}
+
+@each $gray in $grays {
+  .Background-gray-#{$gray} {
+    background-color: var(--gray-#{$gray});
+  }
+}
+
+@each $hue in $hues {
+  @each $type in $types {
+    @if $hue == 'white'  {
+      .Background-alpha-#{$type}-#{$hue} {
+        background-color: var(--common-white-alpha)
+      }
+    } @else if $hue == 'black' {
+      .Background-alpha-#{$type}-#{$hue} {
+        background-color: var(--common-black-alpha)
+      }
+    } @else {
+      .Background-alpha-#{$type}-#{$hue} {
+        background-color: var(--#{$type}-#{$hue}-alpha);
+      }
+    }
+  }
+}
+
+@each $gray in $grays {
+  .Background-alpha-gray-#{$gray} {
+    background-color: var(--gray-#{$gray}-alpha);
+  }
+}
+
+@each $hue in $hues {
+  @each $type in $types {
+    @if $hue == 'white'  {
+      .Background-hover-#{$type}-#{$hue}:hover, .Background-hover-#{$type}-#{$hue}:focus {
+        background-color: var(--common-white);
+      }
+    } @else if $hue == 'black' {
+      .Background-hover-#{$type}-#{$hue}:hover, .Background-hover-#{$type}-#{$hue}:focus {
+        background-color: var(--common-black);
+      }
+    } @else {
+      .Background-hover-#{$type}-#{$hue}:hover, .Background-hover-#{$type}-#{$hue}:focus {
+        background-color: var(--#{$type}-#{$hue});
+      }
+    }
+  }
+}
+
+@each $gray in $grays {
+  .Background-hover-gray-#{$gray}:hover, .Background-hover-gray-#{$gray}:focus  {
+    background-color: var(--gray-#{$gray});
+  }
+}
+
+@each $hue in $hues {
+  @each $type in $types {
+    @if $hue == 'white'  {
+      .Background-hover-alpha-#{$type}-#{$hue}:hover, .Background-hover-alpha-#{$type}-#{$hue}:focus {
+        background-color: var(--common-white-alpha);
+      }
+    } @else if $hue == 'black' {
+      .Background-hover-alpha-#{$type}-#{$hue}:hover, .Background-hover-alpha-#{$type}-#{$hue}:focus {
+        background-color: var(--common-black-alpha);
+      }
+    } @else {
+      .Background-hover-alpha-#{$type}-#{$hue}:hover, .Background-hover-alpha-#{$type}-#{$hue}:focus {
+        background-color: var(--#{$type}-#{$hue}-alpha);
+      }
+    }
+  }
+}
+
+@each $gray in $grays {
+  .Background-hover-alpha-gray-#{$gray}:hover, .Background-hover-alpha-gray-#{$gray}:focus  {
+    background-color: var(--gray-#{$gray}-alpha);
+  }
+}
+
+@each $hue in $hues {
+  @each $type in $types {
+    @if $hue == 'white'  {
+      .Border-#{$type}-#{$hue} {
+        border-color: var(--common-white);
+      }
+    } @else if $hue == 'black' {
+      .Border-#{$type}-#{$hue} {
+        border-color: var(--common-black);
+      }
+    } @else {
+      .Border-#{$type}-#{$hue} {
+        border-color: var(--#{$type}-#{$hue});
+      }
+    }
+  }
+}
+
+@each $text in $texts {
+  .Border-#{$text} {
+    border-color: var(--#{$text});
+  }
+}
+
+@each $gray in $grays {
+  .Border-gray-#{$gray} {
+    border-color: var(--gray-#{$gray});
+  }
+}
+
+@each $hue in $hues {
+  @each $type in $types {
+    @if $hue == 'white'  {
+      .Border-hover-#{$type}-#{$hue}:hover, .Border-hover-#{$type}-#{$hue}:focus {
+        border-color: var(--common-white);
+      }
+    } @else if $hue == 'black' {
+      .Border-hover-#{$type}-#{$hue}:hover, .Border-hover-#{$type}-#{$hue}:focus {
+        border-color: var(--common-black);
+      }
+    } @else {
+      .Border-hover-#{$type}-#{$hue}:hover, .Border-hover-#{$type}-#{$hue}:focus {
+        border-color: var(--#{$type}-#{$hue});
+      }
+    }
+  }
+}
+
+@each $gray in $grays {
+  .Border-hover-gray-#{$gray}:hover, .Border-hover-gray-#{$gray}:focus {
+    border-color: var(--gray-#{$gray});
+  }
+}
+
+@each $hue in $hues {
+  @each $type in $types {
+    @if $hue == 'white'  {
+      .Outline-#{$type}-#{$hue} {
+        outline-color: var(--common-white);
+      }
+    } @else if $hue == 'black' {
+      .Outline-#{$type}-#{$hue} {
+        outline-color: var(--common-black);
+      }
+    } @else {
+      .Outline-#{$type}-#{$hue} {
+        outline-color: var(--#{$type}-#{$hue});
+      }
+    }
+  }
+}
+
+@each $hue in $hues {
+  @each $type in $types {
+    @if $hue == 'white'  {
+      .Outline-alpha-#{$type}-#{$hue} {
+        outline-color: var(--common-white-alpha)
+      }
+    } @else if $hue == 'black' {
+      .Outline-alpha-#{$type}-#{$hue} {
+        outline-color: var(--common-black-alpha)
+      }
+    } @else {
+      .Outline-alpha-#{$type}-#{$hue} {
+        outline-color: var(--#{$type}-#{$hue}-alpha);
+      }
+    }
+  }
+}
+
+@each $text in $texts {
+  .Outline-#{$text} {
+    border-color: var(--#{$text});
+  }
+}
+
+@each $gray in $grays {
+  .Outline-gray-#{$gray} {
+    outline-color: var(--gray-#{$gray});
+  }
+}
+
+@each $hue in $hues {
+  @each $type in $types {
+    @if $hue == 'white'  {
+      .Outline-hover-#{$type}-#{$hue}:hover, .Outline-hover-#{$type}-#{$hue}:focus {
+        outline-color: var(--common-white);
+      }
+    } @else if $hue == 'black' {
+      .Outline-hover-#{$type}-#{$hue}:hover, .Outline-hover-#{$type}-#{$hue}:focus {
+        outline-color: var(--common-black);
+      }
+    } @else {
+      .Outline-hover-#{$type}-#{$hue}:hover, .Outline-hover-#{$type}-#{$hue}:focus {
+        outline-color: var(--#{$type}-#{$hue});
+      }
+    }
+  }
+}
+
+@each $gray in $grays {
+  .Outline-hover-gray-#{$gray}:hover,.Outline-hover-gray-#{$gray}:focus {
+    outline-color: var(--gray-#{$gray});
+  }
+}
+
+$shadows: 0 , 1 , 2 , 3, 4 , 5, 6, 7, 8, 9, 10, 11, 12 , 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24;
+
+@each $shadow in $shadows {
+  @each $hue in $hues {
+    @each $type in $types {
+      @if $hue == 'white'  {
+        .Shadow-#{$shadow}-#{$type}-#{$hue} {
+          box-shadow: 0 #{$shadow}px calc(#{$shadow} * 2px) var(--common-white-alpha);
+        }
+      } @else if $hue == 'black' {
+        .Shadow-#{$shadow}-#{$type}-#{$hue} {
+          box-shadow: 0 #{$shadow}px calc(#{$shadow} * 2px) var(--common-black-alpha);
+        }
+      } @else {
+        .Shadow-#{$shadow}-#{$type}-#{$hue} {
+          box-shadow: 0 #{$shadow}px calc(#{$shadow} * 2px) var(--#{$type}-#{$hue}-alpha);
+        }
+      }
+    }
+  }
+}
+
+@each $shadow in $shadows {
+  @each $hue in $hues {
+    @each $type in $types {
+      @if $hue == 'white'  {
+        .Shadow-hover-#{$shadow}-#{$type}-#{$hue}:hover  {
+          box-shadow: 0 #{$shadow}px calc(#{$shadow} * 2px) var(--common-white-alpha);
+        }
+      } @else if $hue == 'black' {
+        .Shadow-hover-#{$shadow}-#{$type}-#{$hue}:hover  {
+          box-shadow: 0 #{$shadow}px calc(#{$shadow} * 2px) var(--common-black-alpha);
+        }
+      } @else {
+        .Shadow-hover-#{$shadow}-#{$type}-#{$hue}:hover {
+          box-shadow: 0 #{$shadow}px calc(#{$shadow} * 2px) var(--#{$type}-#{$hue}-alpha);
+        }
+      }
+    }
+  }
+}
+
+.Border-Radius-xs {
+  border-radius: rem(2);
+}
+
+.Border-Radius-sm {
+  border-radius: rem(4);
+}
+
+.Border-Radius-md {
+  border-radius: rem(8);
+}
+
+.Border-Radius-lg {
+  border-radius: rem(16);
+}
+
+.Border-Radius-xl {
+  border-radius: rem(32);
+}
+
+$positions: '', '-inline','-block';
+@each $position in $positions {
+
+  .Padding#{$position}-xs {
+    padding#{$position}: rem(2)
+  }
+
+  .Padding#{$position}-sm {
+    padding#{$position}: rem(4);
+  }
+
+  .Padding#{$position}-md {
+    padding#{$position}: rem(8);
+  }
+
+  .Padding#{$position}-lg {
+    padding#{$position}: rem(16);
+  }
+
+  .Padding#{$position}-xl {
+    padding#{$position}: rem(32);
+  }
+
+  .Margin#{$position}-xs {
+    margin#{$position}: rem(2)
+  }
+
+  .Margin#{$position}-sm {
+    margin#{$position}: rem(4);
+  }
+
+  .Margin#{$position}-md {
+    margin#{$position}: rem(8);
+  }
+
+  .Margin#{$position}-lg {
+    margin#{$position}: rem(16);
+  }
+
+  .Margin#{$position}-xl {
+    margin#{$position}: rem(32);
+  }
+}
+
+$fontWeights: 100,200,300,400,500,600,700;
+
+@each $fontWeight in $fontWeights {
+  .FontWeight#{$fontWeight} {
+    font-weight: #{$fontWeight};
+  }
+}
+
+
