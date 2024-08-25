@@ -1,7 +1,36 @@
 {
   "name": "@ezbiz/react-components",
-  "version": "0.0.1",
+  "version": "0.0.22",
   "dependencies": {
-    "requirejs": "^2.3.7"
-  }
+    "requirejs": "^2.3.7",
+    "@ezbiz/react-thirdparty": "^0.0.15",
+    "@ezbiz/util": "^0.0.7"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "BSD-3-Clause",
+  "author": "PlaySmart-Kids <playsmart.kids@gmail.com>",
+  "exports": {
+    ".": {
+      "import": "./index.esm.js",
+      "require": "./index.esm.js",
+      "types": "./index.esm.d.ts"
+    },
+    "./server": {
+      "import": "./server.esm.js",
+      "require": "./server.esm.js",
+      "types": "./server.esm.d.ts"
+    }
+  },
+  "files": [
+    "libs/",
+    "custom_modules/",
+    "src/",
+    "*.ts",
+    "*.js",
+    "*.md",
+    "*.json",
+    ".npmignore"
+  ]
 }
