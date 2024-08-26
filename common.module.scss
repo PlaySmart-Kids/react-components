@@ -142,6 +142,7 @@ $texts: 'text-primary','text-secondary','text-disabled','common-black','common-w
   }
 }
 
+
 @each $hue in $hues {
   @each $type in $types {
     @if $hue == 'white'  {
