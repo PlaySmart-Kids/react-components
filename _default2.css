@@ -630,7 +630,23 @@ h6 {
   font-size: var(--12px);
   line-height: var(--18px);
   font-weight: 700;
-  text-transform: uppercase;
+  text-decoration: overline;
+}
+
+.line-through {
+  font-family: var(--font-secondary) , sans-serif;
+  font-size: var(--12px);
+  line-height: var(--18px);
+  font-weight: 700;
+  text-decoration: line-through;
+}
+
+.underline {
+  font-family: var(--font-secondary) , sans-serif;
+  font-size: var(--12px);
+  line-height: var(--18px);
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 a {

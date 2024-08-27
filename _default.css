@@ -6,25 +6,27 @@
 .material-symbol:before{display:none;}
 .material-icons {
   display: inline-flex;
-  font-size: inherit;
+  font-display: swap;
 }
 
 .material-symbols {
   display: inline-flex;
-  font-size: inherit;
+  font-display: swap;
 }
 
 .material-symbols-rounded {
   display: inline-flex;
-  font-size: inherit;
+  font-display: swap;
 }
 
 .material-symbols-sharp {
   display: inline-flex;
+  font-display: swap;
 }
 
 .material-symbols-outlined {
   display: inline-flex;
+  font-display: swap;
 }
 
 :root {
@@ -516,6 +518,22 @@ h6 {
   line-height: var(--18px);
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.line-through {
+  font-family: var(--font-secondary) , sans-serif;
+  font-size: var(--12px);
+  line-height: var(--18px);
+  font-weight: 700;
+  text-decoration: line-through;
+}
+
+.underline {
+  font-family: var(--font-secondary) , sans-serif;
+  font-size: var(--12px);
+  line-height: var(--18px);
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 a {
