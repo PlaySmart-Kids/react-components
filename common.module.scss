@@ -4,8 +4,48 @@
   width: 100%;
 }
 
+.FlexPanel {
+  display: flex;
+}
+
+.InlineFlex {
+  display: inline-flex;
+}
+
+.FlexRow {
+  flex-direction: row;
+}
+
+.FlexColumn {
+  flex-direction: column;
+}
+
 .FullHeight {
   height: 100%;
+}
+
+.JustifyCenter {
+  justify-content: center;
+}
+
+.JustifySpaceBetween {
+  justify-content: space-between;
+}
+
+.JustifySpaceEvenly {
+  justify-content: space-evenly;
+}
+
+.JustifySpaceAround {
+  justify-content: space-around;
+}
+
+.HiddenOverflow {
+  overflow: hidden;
+}
+
+.RelativePosition {
+  position: relative;
 }
 
 .FitContentWidth {
@@ -342,21 +382,22 @@ $texts: 'text-primary','text-secondary','text-disabled','common-black','common-w
 }
 
 $shadows: 0 , 1 , 2 , 3, 4 , 5, 6, 7, 8, 9, 10, 11, 12 , 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24;
+$two_rem: rem(2);
 
 @each $shadow in $shadows {
   @each $hue in $hues {
     @each $type in $types {
       @if $hue == 'white'  {
         .Shadow-#{$shadow}-#{$type}-#{$hue} {
-          box-shadow: 0 #{$shadow}px calc(#{$shadow} * 2px) var(--common-white-alpha);
+          box-shadow: 0 rem($shadow) calc(#{$shadow} * #{$two_rem}) var(--common-white-alpha);
         }
       } @else if $hue == 'black' {
         .Shadow-#{$shadow}-#{$type}-#{$hue} {
-          box-shadow: 0 #{$shadow}px calc(#{$shadow} * 2px) var(--common-black-alpha);
+          box-shadow: 0 rem($shadow) calc(#{$shadow} * #{$two_rem}) var(--common-black-alpha);
         }
       } @else {
         .Shadow-#{$shadow}-#{$type}-#{$hue} {
-          box-shadow: 0 #{$shadow}px calc(#{$shadow} * 2px) var(--#{$type}-#{$hue}-alpha);
+          box-shadow: 0 rem($shadow) calc(#{$shadow} * #{$two_rem}) var(--#{$type}-#{$hue}-alpha);
         }
       }
     }
@@ -368,15 +409,15 @@ $shadows: 0 , 1 , 2 , 3, 4 , 5, 6, 7, 8, 9, 10, 11, 12 , 13, 14, 15, 16, 17, 18,
     @each $type in $types {
       @if $hue == 'white'  {
         .Shadow-hover-#{$shadow}-#{$type}-#{$hue}:hover  {
-          box-shadow: 0 #{$shadow}px calc(#{$shadow} * 2px) var(--common-white-alpha);
+          box-shadow: 0 rem($shadow) calc(#{$shadow} * #{$two_rem}) var(--common-white-alpha);
         }
       } @else if $hue == 'black' {
         .Shadow-hover-#{$shadow}-#{$type}-#{$hue}:hover  {
-          box-shadow: 0 #{$shadow}px calc(#{$shadow} * 2px) var(--common-black-alpha);
+          box-shadow: 0 rem($shadow) calc(#{$shadow} * #{$two_rem}) var(--common-black-alpha);
         }
       } @else {
         .Shadow-hover-#{$shadow}-#{$type}-#{$hue}:hover {
-          box-shadow: 0 #{$shadow}px calc(#{$shadow} * 2px) var(--#{$type}-#{$hue}-alpha);
+          box-shadow: 0 rem($shadow) calc(#{$shadow} * #{$two_rem}) var(--#{$type}-#{$hue}-alpha);
         }
       }
     }
@@ -401,6 +442,26 @@ $shadows: 0 , 1 , 2 , 3, 4 , 5, 6, 7, 8, 9, 10, 11, 12 , 13, 14, 15, 16, 17, 18,
 
 .Border-Radius-xl {
   border-radius: rem(32);
+}
+
+.Gap-xs {
+  gap: rem(2)
+}
+
+.Gap-sm {
+  gap: rem(4);
+}
+
+.Gap-md {
+  gap: rem(8);
+}
+
+.Gap-lg {
+  gap: rem(16);
+}
+
+.Gap-xl {
+  gap: rem(32);
 }
 
 $positions: '', '-inline','-block';
