@@ -1,16 +1,31 @@
 {
   "name": "@ezbiz/react-components",
-  "version": "0.0.28",
+  "version": "0.0.29",
   "dependencies": {
     "requirejs": "^2.3.7",
     "@ezbiz/react-thirdparty": "^0.0.16",
     "@ezbiz/util": "^0.0.7"
   },
+  "keywords": [
+    "react-components",
+    "components",
+    "nextjs components"
+  ],
   "publishConfig": {
     "access": "public"
   },
   "license": "BSD-3-Clause",
   "author": "PlaySmart-Kids <playsmart.kids@gmail.com>",
+  "contributors": [
+    {
+      "name": "Nattawut Ngampatipatpong",
+      "email": "nnattawut@gmail.com"
+    },
+    {
+      "name": "Jariya Tuantranont",
+      "email": "tjariya@gmail.com"
+    }
+  ],
   "exports": {
     ".": {
       "import": "./index.esm.js",

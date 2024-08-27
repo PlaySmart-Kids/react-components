@@ -1,0 +1,6 @@
+import{j as e,D as s,a as i,F as l,T as p}from"./DefaultThemeProvider-CceS3XqJ.js";import{r as c}from"./index-BwDkhjyp.js";import{H as g}from"./Highlight-BYFZzPJH.js";import"./_commonjsHelpers-BosuxZz1.js";function d(a){return c.useState(),i(l,{children:[" ",e("div",{style:{padding:"10px",display:"flex",justifyContent:"start",paddingBlockStart:"1rem"},children:e(p,{component:"h4",children:"HighlightJs demo (using controls to change properties of this widget)"})}),e("div",{style:{position:"relative",padding:"20px",margin:"auto",gap:"15px",height:"300px",width:"100%",display:"flex",justifyContent:"center",alignItems:"center"},children:e(g,{language:a.language,value:a.value})})]})}const v={component:d,parameters:{layout:"padded"},decorators:[a=>e(s,{children:e(a,{})})],argTypes:{value:{}}},t={args:{value:'function a() { console.log("HELLO WORLD"); }',language:"javascript"}};var r,o,n;t.parameters={...t.parameters,docs:{...(r=t.parameters)==null?void 0:r.docs,source:{originalSource:`{
+  args: {
+    value: \`function a() { console.log("HELLO WORLD"); }\`,
+    language: 'javascript'
+  }
+}`,...(n=(o=t.parameters)==null?void 0:o.docs)==null?void 0:n.source}}};const x=["Demo"];export{t as Demo,x as __namedExportsOrder,v as default};
