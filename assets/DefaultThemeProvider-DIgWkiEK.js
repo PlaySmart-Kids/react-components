@@ -1,9 +1,0 @@
-import{r as a}from"./index-BwDkhjyp.js";var f={exports:{}},u={};/**
- * @license React
- * react-jsx-runtime.production.min.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */var v=a,y=Symbol.for("react.element"),h=Symbol.for("react.fragment"),x=Object.prototype.hasOwnProperty,b=v.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,j={key:!0,ref:!0,__self:!0,__source:!0};function m(r,e,l){var t,s={},n=null,i=null;l!==void 0&&(n=""+l),e.key!==void 0&&(n=""+e.key),e.ref!==void 0&&(i=e.ref);for(t in e)x.call(e,t)&&!j.hasOwnProperty(t)&&(s[t]=e[t]);if(r&&r.defaultProps)for(t in e=r.defaultProps,e)s[t]===void 0&&(s[t]=e[t]);return{$$typeof:y,type:r,key:n,ref:i,props:s,_owner:b.current}}u.Fragment=h;u.jsx=m;u.jsxs=m;f.exports=u;var c=f.exports;const E=c.Fragment,p=c.jsx,O=c.jsxs,k=Object.freeze(Object.defineProperty({__proto__:null,Fragment:E,jsx:p,jsxs:O},Symbol.toStringTag,{value:"Module"})),g=a.createContext(void 0);function d(r){const[e,l]=a.useState(r.variables?r.variables:{}),[t,s]=a.useState(!r.href),{href:n,children:i}=r;return a.useEffect(()=>{for(const[o,_]of Object.entries(e))document.documentElement.style.setProperty("--"+o,_)},[e]),a.useEffect(()=>{let o;return n&&(o=document.createElement("link"),o.rel="stylesheet",o.href=n,o.onload=function(){s(!0)},document.head.appendChild(o)),()=>{o&&document.head.removeChild(o)}},[n]),p(g.Provider,{value:{href:n,variables:e,setVariables:l},children:t&&i})}try{d.displayName="DefaultThemeProvider",d.__docgenInfo={description:"",displayName:"DefaultThemeProvider",props:{href:{defaultValue:null,description:"",name:"href",required:!1,type:{name:"string"}},variables:{defaultValue:null,description:"",name:"variables",required:!1,type:{name:"{ [key: string]: string; }"}}}}}catch{}export{d as D,E as F,O as a,k as b,p as j};
