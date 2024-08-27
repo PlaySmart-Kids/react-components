@@ -1,0 +1,1 @@
+import{a as i,F as s,j as t}from"./DefaultThemeProvider-BaYT9d3z.js";import{M as a}from"./ProfileLink-4-uIRhsF.js";function f(r,o,e){return i(s,{children:[!r.renderer&&typeof r.icon=="string"&&t(a,{name:r.icon,size:e?void 0:20}),!r.renderer&&typeof r.icon!="string"&&r.icon,!r.renderer&&o&&r.label,r.renderer&&r.renderer(r,e)]})}export{f as R};

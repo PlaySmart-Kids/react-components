@@ -6,22 +6,27 @@
 .material-symbol:before{display:none;}
 .material-icons {
   display: inline-flex;
+  font-display: swap;
 }
 
 .material-symbols {
   display: inline-flex;
+  font-display: swap;
 }
 
 .material-symbols-rounded {
   display: inline-flex;
+  font-display: swap;
 }
 
 .material-symbols-sharp {
   display: inline-flex;
+  font-display: swap;
 }
 
 .material-symbols-outlined {
   display: inline-flex;
+  font-display: swap;
 }
 
 
