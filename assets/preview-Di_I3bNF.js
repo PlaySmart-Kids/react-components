@@ -1,0 +1,1 @@
+import"./index-BwDkhjyp.js";import{P as o}from"./index-D94qCVC8.js";import"./_commonjsHelpers-BosuxZz1.js";const a={parameters:{layout:"fullscreen",actions:{argTypesRegex:"^on[A-Z].*"},controls:{matchers:{color:/(background|color)$/i,date:/Date$/}}}};o();export{a as default};

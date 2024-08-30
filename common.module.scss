@@ -20,6 +20,10 @@
   flex-direction: column;
 }
 
+.UnderlineHover:hover {
+  text-decoration: underline;
+}
+
 .FullHeight {
   height: 100%;
 }
@@ -115,6 +119,24 @@ $texts: 'text-primary','text-secondary','text-disabled','common-black','common-w
   }
 }
 
+@each $hue in $hues {
+  @each $type in $types {
+    @if $hue == 'white'  {
+      .Color-hover-#{$type}-#{$hue}:hover, .Color-hover-#{$type}-#{$hue}:focus {
+        color: var(--common-white);
+      }
+    } @else if $hue == 'black' {
+      .Color-hover-#{$type}-#{$hue}:hover, .Color-hover-#{$type}-#{$hue}:focus {
+        color: var(--common-black);
+      }
+    } @else {
+      .Color-hover-#{$type}-#{$hue}:hover, .Color-hover-#{$type}-#{$hue}:focus {
+        color: var(--#{$type}-#{$hue});
+      }
+    }
+  }
+}
+
 @each $gray in $grays {
   .Color-gray-#{$gray} {
     color: var(--gray-#{$gray});
@@ -123,6 +145,12 @@ $texts: 'text-primary','text-secondary','text-disabled','common-black','common-w
 
 @each $text in $texts {
   .Color-#{$text} {
+    color: var(--#{$text});
+  }
+}
+
+@each $text in $texts {
+  .Color-hover-#{$text}:hover, .Color-hover-#{$text}:focus {
     color: var(--#{$text});
   }
 }

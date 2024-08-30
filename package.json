@@ -1,10 +1,11 @@
 {
   "name": "@ezbiz/react-components",
-  "version": "0.0.29",
+  "version": "0.0.30",
   "dependencies": {
     "requirejs": "^2.3.7",
     "@ezbiz/react-thirdparty": "^0.0.16",
-    "@ezbiz/util": "^0.0.7"
+    "@ezbiz/util": "^0.0.7",
+    "joi": "^17.13.3"
   },
   "keywords": [
     "react-components",
