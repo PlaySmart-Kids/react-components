@@ -1,0 +1,1 @@
+import{j as i,F as o,a,M as n}from"./DefaultThemeProvider-DbvuuPiG.js";function d(r,s,e){return i(o,{children:[!r.renderer&&typeof r.icon=="string"&&a(n,{name:r.icon,size:e?18:16}),!r.renderer&&typeof r.icon!="string"&&r.icon,!r.renderer&&s&&r.label,r.renderer&&r.renderer(r,e)]})}export{d as R};

@@ -594,14 +594,14 @@ h6 {
 .subtitle1 {
   font-family: var(--font-primary) , sans-serif;
   font-size: var(--16px);
-  font-weight: 500;
+  font-weight: 600;
   line-height: var(--24px);
 }
 
 .subtitle2 {
   font-family: var(--font-primary) , sans-serif;
   font-size: var(--14px);
-  font-weight: 500;
+  font-weight: 600;
   line-height: var(--22px);
 }
 
