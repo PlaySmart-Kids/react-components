@@ -1,6 +1,6 @@
 {
   "name": "@ezbiz/react-components",
-  "version": "0.0.30",
+  "version": "0.0.31",
   "dependencies": {
     "requirejs": "^2.3.7",
     "@ezbiz/react-thirdparty": "^0.0.16",
