@@ -1,6 +1,0 @@
-import{a as e,j as s,F as i,T as l}from"./Divider-DdokZ4G_.js";import{r as p}from"./index-BwDkhjyp.js";import{D as c}from"./DefaultThemeProvider-DWbcdqGt.js";import{H as g}from"./Highlight-KTIa5Vpx.js";import"./_commonjsHelpers-BosuxZz1.js";function d(a){return p.useState(),s(i,{children:[" ",e("div",{style:{padding:"10px",display:"flex",justifyContent:"start",paddingBlockStart:"1rem"},children:e(l,{component:"h4",children:"HighlightJs demo (using controls to change properties of this widget)"})}),e("div",{style:{position:"relative",padding:"20px",margin:"auto",gap:"15px",height:"300px",width:"100%",display:"flex",justifyContent:"center",alignItems:"center"},children:e(g,{language:a.language,value:a.value})})]})}const x={component:d,parameters:{layout:"padded"},decorators:[a=>e(c,{children:e(a,{})})],argTypes:{value:{}}},t={args:{value:'function a() { console.log("HELLO WORLD"); }',language:"javascript"}};var r,o,n;t.parameters={...t.parameters,docs:{...(r=t.parameters)==null?void 0:r.docs,source:{originalSource:`{
-  args: {
-    value: \`function a() { console.log("HELLO WORLD"); }\`,
-    language: 'javascript'
-  }
-}`,...(n=(o=t.parameters)==null?void 0:o.docs)==null?void 0:n.source}}};const y=["Demo"];export{t as Demo,y as __namedExportsOrder,x as default};

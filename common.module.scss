@@ -77,6 +77,10 @@
   cursor: pointer;
 }
 
+.DefaultPointer {
+  cursor: default;
+}
+
 .InputWidth {
   width: rem(250);
 }
@@ -458,6 +462,10 @@ $two_rem: rem(2);
       }
     }
   }
+}
+
+.Border-Radius-none {
+  border-radius: 0;
 }
 
 .Border-Radius-xs {

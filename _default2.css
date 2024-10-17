@@ -398,7 +398,7 @@
 
 
   --paper-shadow-color: var(--secondary-main-alpha);
-  --paper-border-radius: var(--16px);
+  --paper-border-radius: var(--12px);
 
   --tooltip-z-index: 4000;
   --dialog-z-index: 2000;
