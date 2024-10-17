@@ -1,0 +1,1 @@
+import"./index-DJO9vBfz.js";import{P as o}from"./index-CikfRwdJ.js";const a={parameters:{layout:"fullscreen",controls:{matchers:{color:/(background|color)$/i,date:/Date$/}}},tags:["autodocs"]};o();export{a as default};

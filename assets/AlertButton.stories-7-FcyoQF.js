@@ -1,0 +1,14 @@
+import{j as t}from"./jsx-runtime-CkxqCPlQ.js";import{D as s,T as a,B as c,C as d}from"./DefaultThemeProvider-Ce-zb_Sa.js";import"./index-DJO9vBfz.js";import{A as p}from"./AlertButton-CCPNF3gP.js";import"./index-CikfRwdJ.js";import"./Button-Cm1yCUKV.js";import"./ColorUtil-b9QtJkc2.js";import"./useTimeout-BASJc2V5.js";import"./index-DJbli8uv.js";import"./useRipple-BbkXZzvg.js";import"./index-Cp9I2zMD.js";import"./IconButton-6cAcpLD7.js";import"./RadioButton-BgQOW4iM.js";import"./CheckboxUtil-CqPWmFQ9.js";import"./ActionBar-BH2Q10LK.js";function m(e){return t.jsxs(t.Fragment,{children:[t.jsx("div",{style:{padding:"10px",display:"flex",justifyContent:"start",paddingBlockStart:"1rem"},children:t.jsx(a,{component:"h4",children:"Alert demo (using controls to change properties of this widget)"})}),t.jsx("div",{style:{padding:"24px",display:"flex",justifyContent:"center",alignItems:"center",height:"200px"},children:t.jsxs(p,{buttonLabel:e.buttonLabel,color:e.color,hue:e.hue,variant:e.variant,shadowSize:e.shadowSize,compact:e.compact,fullWidth:e.fullWidth,size:e.size,disabled:e.disabled,spaceBetween:!1,dialogProps:{compact:e.compact},onAction:r=>{console.log(r)},leftActions:[{label:"Cancel",variant:c.OUTLINED,action:"action1"}],rightActions:[{label:"Done",color:d.PRIMARY,action:"action2"}],children:[t.jsx(a,{variant:"heading4",children:"Select action"}),t.jsx("br",{}),t.jsx(a,{variant:"body1",color:"secondary",children:"This is a test"}),t.jsx("br",{})]})})]})}const E={title:"CLIENTS/ui/button/AlertButton",component:m,decorators:[e=>t.jsx(s,{children:t.jsx(e,{})})],argTypes:{color:{options:["primary","info","success","warning","error","secondary"],control:{type:"radio"}},hue:{options:["lightest","lighter","light","main","dark","darker","darkest"],control:{type:"radio"}},variant:{options:["filled","outlined","text"],control:{type:"radio"}},size:{options:["large","normal","small"],control:{type:"radio"}},shadowSize:{defaultValue:4,options:[0,2,4,8,12,16,20,24],control:{type:"radio"}},fullWidth:{defaultValue:!1,control:{type:"boolean"}},compact:{defaultValue:!1,control:{type:"boolean"}},disabled:{defaultValue:!1,control:{type:"boolean"}},noRippleEffect:{control:{type:"boolean"}}}},o={args:{variant:"filled",color:"primary",hue:"main",buttonLabel:"Open",size:"normal",fullWidth:!1,shadowSize:4,compact:!1,disabled:!1,noRippleEffect:!1}};var n,i,l;o.parameters={...o.parameters,docs:{...(n=o.parameters)==null?void 0:n.docs,source:{originalSource:`{
+  args: {
+    variant: 'filled',
+    color: 'primary',
+    hue: 'main',
+    buttonLabel: 'Open',
+    size: 'normal',
+    fullWidth: false,
+    shadowSize: 4,
+    compact: false,
+    disabled: false,
+    noRippleEffect: false
+  }
+}`,...(l=(i=o.parameters)==null?void 0:i.docs)==null?void 0:l.source}}};const B=["Demo"];export{o as Demo,B as __namedExportsOrder,E as default};

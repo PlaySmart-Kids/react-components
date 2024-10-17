@@ -1,0 +1,1 @@
+function b(e,c){e.forEach(a=>{const s=a.target;s.watcher_callback&&s.watcher_callback(a)})}let r;const o={observe:(e,c)=>{e.watcher_callback=c,r||(r=new ResizeObserver(b)),r.observe(e)},unobserve:e=>{delete e.watcher_callback,r&&r.unobserve(e)}};export{o as r};
