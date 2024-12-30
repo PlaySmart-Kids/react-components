@@ -1,6 +1,0 @@
-import{j as e}from"./jsx-runtime-CkxqCPlQ.js";import{D as s,T as i}from"./DefaultThemeProvider-Ce-zb_Sa.js";import{H as l}from"./Highlight-Qmv9CNvH.js";import"./index-DJO9vBfz.js";import"./index-CikfRwdJ.js";import"./Highlight-CBFUEUc4.js";function p(t){return e.jsxs(e.Fragment,{children:[" ",e.jsx("div",{style:{padding:"10px",display:"flex",justifyContent:"start",paddingBlockStart:"1rem"},children:e.jsx(i,{component:"h4",children:"HighlightJs demo (using controls to change properties of this widget)"})}),e.jsx("div",{style:{position:"relative",padding:"20px",margin:"auto",gap:"15px",height:"300px",width:"100%",display:"flex",justifyContent:"center",alignItems:"center"},children:e.jsx(l,{language:t.language,value:t.value})})]})}const x={title:"CLIENTS/ui/thridparty/Highlight",component:p,parameters:{layout:"padded"},decorators:[t=>e.jsx(s,{children:e.jsx(t,{})})],argTypes:{value:{}}},a={args:{value:'function a() { console.log("HELLO WORLD"); }',language:"javascript"}};var r,o,n;a.parameters={...a.parameters,docs:{...(r=a.parameters)==null?void 0:r.docs,source:{originalSource:`{
-  args: {
-    value: \`function a() { console.log("HELLO WORLD"); }\`,
-    language: 'javascript'
-  }
-}`,...(n=(o=a.parameters)==null?void 0:o.docs)==null?void 0:n.source}}};const f=["Demo"];export{a as Demo,f as __namedExportsOrder,x as default};

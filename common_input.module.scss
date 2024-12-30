@@ -11,7 +11,7 @@
   display: flex;
   position: relative;
   width: 100%;
-  //background: var(--common-white); // hint section using this style and it can't have any background
+  background: var(--common-white); // hint section using this style and it can't have any background
 
   color: var(--text-secondary);
 
@@ -131,6 +131,7 @@
   padding-inline-end: rem(10);
   min-width: rem(50);
   width: fit-content;
+
   .DefaultListItemRenderOnInput {
     width: fit-content;
     min-width: unset;
@@ -150,7 +151,7 @@
   overflow: hidden;
   width: 100%;
   max-width: 80%;
-  transition: top 0.2s,font-size 0.2s,margin-inline-start 0.2s;
+  transition: top 0.2s, font-size 0.2s, margin-inline-start 0.2s;
 }
 
 $temp12: rem(12);
@@ -162,7 +163,7 @@ $temp18: rem(18);
   font-size: var(--input-label-font-size);
   top: min(calc(50% - #{$temp12}),#{$temp18});
   left: rem(16);
-  transition: top 0.2s,font-size 0.2s,margin-inline-start 0.2s;
+  transition: top 0.2s, font-size 0.2s, margin-inline-start 0.2s;
   white-space: nowrap;
   text-overflow: ellipsis;
   clip: auto;
@@ -227,7 +228,7 @@ $temp18: rem(18);
   border: 0;
   background: #FFF;
   color: var(--text-secondary);
-  font-family: var(--font-secondary) , sans-serif;
+  font-family: var(--font-secondary), sans-serif;
   padding-inline: 0;
   width: 100%;
   font-size: var(--input-font-size);
@@ -240,6 +241,10 @@ $temp18: rem(18);
   &:disabled {
     color: var(--text-disabled);
   }
+}
+
+.InputWidth {
+  width: rem(200);
 }
 
 

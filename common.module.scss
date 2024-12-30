@@ -28,6 +28,36 @@
   height: 100%;
 }
 
+.NoHeight {
+  height: 0;
+  max-height: 0;
+  min-height: 0;
+}
+
+.NoWidth {
+  width: 0;
+  max-width: 0;
+  min-width: 0;
+}
+
+.Visible {
+  visibility: visible;
+}
+
+.Hidden {
+  visibility: hidden;
+}
+
+
+.JustifyStart {
+  justify-content: flex-start;
+}
+
+
+.JustifyEnd {
+  justify-content: flex-end;
+}
+
 .JustifyCenter {
   justify-content: center;
 }
@@ -62,6 +92,10 @@
 
 .FitContentWidth {
   width: fit-content;
+}
+
+.AbsolutePosition {
+  position: absolute;
 }
 
 .EnableEvent {
@@ -105,17 +139,17 @@
   color: red;
 }
 
-$types: 'primary','info','error','success','warning','secondary';
-$hues: 'main', 'light','lighter', 'lightest', 'white' , 'dark','darker', 'darkest', 'black';
+$types: 'primary', 'info', 'error', 'success', 'warning', 'secondary';
+$hues: 'main', 'light', 'lighter', 'lightest', 'white', 'dark', 'darker', 'darkest', 'black';
 
-$grays: 100,200,300,400,500,600,700,800,900;
+$grays: 100, 200, 300, 400, 500, 600, 700, 800, 900;
 
-$texts: 'text-primary','text-secondary','text-disabled','common-black','common-white','transparent';
+$texts: 'text-primary', 'text-secondary', 'text-disabled', 'common-black', 'common-white', 'transparent';
 
 
 @each $hue in $hues {
   @each $type in $types {
-    @if $hue == 'white'  {
+    @if $hue == 'white' {
       .Color-#{$type}-#{$hue} {
         color: var(--common-white);
       }
@@ -133,7 +167,7 @@ $texts: 'text-primary','text-secondary','text-disabled','common-black','common-w
 
 @each $hue in $hues {
   @each $type in $types {
-    @if $hue == 'white'  {
+    @if $hue == 'white' {
       .Color-hover-#{$type}-#{$hue}:hover, .Color-hover-#{$type}-#{$hue}:focus {
         color: var(--common-white);
       }
@@ -169,7 +203,7 @@ $texts: 'text-primary','text-secondary','text-disabled','common-black','common-w
 
 @each $hue in $hues {
   @each $type in $types {
-    @if $hue == 'white'  {
+    @if $hue == 'white' {
       .Color-hover-#{$type}-#{$hue}:hover, .Color-hover-#{$type}-#{$hue}:focus {
         color: var(--common-white);
       }
@@ -194,7 +228,7 @@ $texts: 'text-primary','text-secondary','text-disabled','common-black','common-w
 
 @each $hue in $hues {
   @each $type in $types {
-    @if $hue == 'white'  {
+    @if $hue == 'white' {
       .Background-#{$type}-#{$hue} {
         background-color: var(--common-white);
       }
@@ -225,7 +259,7 @@ $texts: 'text-primary','text-secondary','text-disabled','common-black','common-w
 
 @each $hue in $hues {
   @each $type in $types {
-    @if $hue == 'white'  {
+    @if $hue == 'white' {
       .Background-alpha-#{$type}-#{$hue} {
         background-color: var(--common-white-alpha)
       }
@@ -249,7 +283,7 @@ $texts: 'text-primary','text-secondary','text-disabled','common-black','common-w
 
 @each $hue in $hues {
   @each $type in $types {
-    @if $hue == 'white'  {
+    @if $hue == 'white' {
       .Background-hover-#{$type}-#{$hue}:hover, .Background-hover-#{$type}-#{$hue}:focus {
         background-color: var(--common-white);
       }
@@ -266,14 +300,14 @@ $texts: 'text-primary','text-secondary','text-disabled','common-black','common-w
 }
 
 @each $gray in $grays {
-  .Background-hover-gray-#{$gray}:hover, .Background-hover-gray-#{$gray}:focus  {
+  .Background-hover-gray-#{$gray}:hover, .Background-hover-gray-#{$gray}:focus {
     background-color: var(--gray-#{$gray});
   }
 }
 
 @each $hue in $hues {
   @each $type in $types {
-    @if $hue == 'white'  {
+    @if $hue == 'white' {
       .Background-hover-alpha-#{$type}-#{$hue}:hover, .Background-hover-alpha-#{$type}-#{$hue}:focus {
         background-color: var(--common-white-alpha);
       }
@@ -290,14 +324,14 @@ $texts: 'text-primary','text-secondary','text-disabled','common-black','common-w
 }
 
 @each $gray in $grays {
-  .Background-hover-alpha-gray-#{$gray}:hover, .Background-hover-alpha-gray-#{$gray}:focus  {
+  .Background-hover-alpha-gray-#{$gray}:hover, .Background-hover-alpha-gray-#{$gray}:focus {
     background-color: var(--gray-#{$gray}-alpha);
   }
 }
 
 @each $hue in $hues {
   @each $type in $types {
-    @if $hue == 'white'  {
+    @if $hue == 'white' {
       .Border-#{$type}-#{$hue} {
         border-color: var(--common-white);
       }
@@ -327,7 +361,7 @@ $texts: 'text-primary','text-secondary','text-disabled','common-black','common-w
 
 @each $hue in $hues {
   @each $type in $types {
-    @if $hue == 'white'  {
+    @if $hue == 'white' {
       .Border-hover-#{$type}-#{$hue}:hover, .Border-hover-#{$type}-#{$hue}:focus {
         border-color: var(--common-white);
       }
@@ -351,7 +385,7 @@ $texts: 'text-primary','text-secondary','text-disabled','common-black','common-w
 
 @each $hue in $hues {
   @each $type in $types {
-    @if $hue == 'white'  {
+    @if $hue == 'white' {
       .Outline-#{$type}-#{$hue} {
         outline-color: var(--common-white);
       }
@@ -369,7 +403,7 @@ $texts: 'text-primary','text-secondary','text-disabled','common-black','common-w
 
 @each $hue in $hues {
   @each $type in $types {
-    @if $hue == 'white'  {
+    @if $hue == 'white' {
       .Outline-alpha-#{$type}-#{$hue} {
         outline-color: var(--common-white-alpha)
       }
@@ -399,7 +433,7 @@ $texts: 'text-primary','text-secondary','text-disabled','common-black','common-w
 
 @each $hue in $hues {
   @each $type in $types {
-    @if $hue == 'white'  {
+    @if $hue == 'white' {
       .Outline-hover-#{$type}-#{$hue}:hover, .Outline-hover-#{$type}-#{$hue}:focus {
         outline-color: var(--common-white);
       }
@@ -416,18 +450,18 @@ $texts: 'text-primary','text-secondary','text-disabled','common-black','common-w
 }
 
 @each $gray in $grays {
-  .Outline-hover-gray-#{$gray}:hover,.Outline-hover-gray-#{$gray}:focus {
+  .Outline-hover-gray-#{$gray}:hover, .Outline-hover-gray-#{$gray}:focus {
     outline-color: var(--gray-#{$gray});
   }
 }
 
-$shadows: 0 , 1 , 2 , 3, 4 , 5, 6, 7, 8, 9, 10, 11, 12 , 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24;
+$shadows: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24;
 $two_rem: rem(2);
 
 @each $shadow in $shadows {
   @each $hue in $hues {
     @each $type in $types {
-      @if $hue == 'white'  {
+      @if $hue == 'white' {
         .Shadow-#{$shadow}-#{$type}-#{$hue} {
           box-shadow: 0 rem($shadow) calc(#{$shadow} * #{$two_rem}) var(--common-white-alpha);
         }
@@ -447,12 +481,12 @@ $two_rem: rem(2);
 @each $shadow in $shadows {
   @each $hue in $hues {
     @each $type in $types {
-      @if $hue == 'white'  {
-        .Shadow-hover-#{$shadow}-#{$type}-#{$hue}:hover  {
+      @if $hue == 'white' {
+        .Shadow-hover-#{$shadow}-#{$type}-#{$hue}:hover {
           box-shadow: 0 rem($shadow) calc(#{$shadow} * #{$two_rem}) var(--common-white-alpha);
         }
       } @else if $hue == 'black' {
-        .Shadow-hover-#{$shadow}-#{$type}-#{$hue}:hover  {
+        .Shadow-hover-#{$shadow}-#{$type}-#{$hue}:hover {
           box-shadow: 0 rem($shadow) calc(#{$shadow} * #{$two_rem}) var(--common-black-alpha);
         }
       } @else {
@@ -508,7 +542,7 @@ $two_rem: rem(2);
   gap: rem(32);
 }
 
-$positions: '', '-inline','-block';
+$positions: '', '-inline', '-block';
 @each $position in $positions {
 
   .Padding#{$position}-xs {
@@ -552,7 +586,7 @@ $positions: '', '-inline','-block';
   }
 }
 
-$fontWeights: 100,200,300,400,500,600,700;
+$fontWeights: 100, 200, 300, 400, 500, 600, 700;
 
 @each $fontWeight in $fontWeights {
   .FontWeight#{$fontWeight} {

@@ -1,0 +1,6 @@
+import{j as e}from"./jsx-runtime-CkxqCPlQ.js";import{T as l}from"./Timer-h-JiAl7z.js";import{D as c,T as t}from"./DefaultThemeProvider-DB5yquFP.js";import"./index-DJO9vBfz.js";import"./index-CikfRwdJ.js";function m(n){return e.jsxs(e.Fragment,{children:[e.jsx("div",{style:{padding:"10px",display:"flex",justifyContent:"start",paddingBlockStart:"1rem"},children:e.jsx(t,{component:"h4",children:"Timer demo"})}),e.jsxs("div",{style:{display:"flex",flexDirection:"column",justifyContent:"center",width:"100%",textAlign:"center",paddingBlockStart:"150px"},children:[e.jsxs(t,{component:"h4",children:["Countdown (",n.value," min)"]}),e.jsx("br",{}),e.jsx("br",{}),e.jsx(l,{countUp:n.countUp,untilTimeInMs:new Date().getTime()+n.value*60*1e3,waitInMS:1e3,renderer:r=>r?e.jsxs("span",{style:{fontSize:40,color:"black"},children:[r.mins," :"," ",r.secs<10?"0"+r.secs:r.secs]}):null})]})]})}const f={title:"CLIENTS/ui/timer/Timer",component:m,decorators:[n=>e.jsx(c,{children:e.jsx(n,{})})],argTypes:{value:{name:"value (Time in min)"}}},s={args:{value:1,countUp:!1}};var o,i,a;s.parameters={...s.parameters,docs:{...(o=s.parameters)==null?void 0:o.docs,source:{originalSource:`{
+  args: {
+    value: 1,
+    countUp: false
+  }
+}`,...(a=(i=s.parameters)==null?void 0:i.docs)==null?void 0:a.source}}};const h=["Demo"];export{s as Demo,h as __namedExportsOrder,f as default};

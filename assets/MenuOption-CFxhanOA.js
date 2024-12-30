@@ -1,1 +1,0 @@
-import{j as e}from"./jsx-runtime-CkxqCPlQ.js";import{M as t}from"./DefaultThemeProvider-Ce-zb_Sa.js";function d(r,i,o){return e.jsxs(e.Fragment,{children:[!r.renderer&&typeof r.icon=="string"&&e.jsx(t,{name:r.icon,size:o?18:16}),!r.renderer&&typeof r.icon!="string"&&r.icon,!r.renderer&&i&&r.label,r.renderer&&r.renderer(r,o)]})}export{d as R};

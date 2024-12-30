@@ -1,0 +1,1 @@
+const r="_TipPanel_x8x5c_1",n="_TipPanelSmall_x8x5c_18",e="_ArrowPanel_x8x5c_27",l="_ArrowCenter_x8x5c_39",o="_Arrow_x8x5c_27",_={TipPanel:r,TipPanelSmall:n,ArrowPanel:e,ArrowCenter:l,Arrow:o};export{_ as s};
